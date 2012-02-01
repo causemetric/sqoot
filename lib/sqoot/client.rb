@@ -1,8 +1,11 @@
 require "forwardable"
+require "sqoot/offer"
 
 module Sqoot
   class Client
     extend Forwardable
+
+    include Offer
 
     attr_reader :affiliate_token, :authentication_token
 
@@ -34,9 +37,10 @@ module Sqoot
 
     def default_headers
       headers = {
-        :accept => 'application/json',
-        :user_agent => 'Ruby gem',
-        :authorization => @authentication_token
+        :authorization => @authentication_token,
+        :accept => '*/*',
+        :accept_encoding => 'gzip',
+        :user_agent => 'Ruby gem'
       }
     end
 
