@@ -8,12 +8,6 @@ module Sqoot
         req.url "/v1/offers", query
       end
 
-      sio = StringIO.new(response.body)
-      gz = Zlib::GzipReader.new(sio)
-      # TODO: This returns a string object that needs to be converted
-      # into Hashie::Mash
-      gz.read()
-
     end
 
   end
