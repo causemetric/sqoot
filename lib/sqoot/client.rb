@@ -1,5 +1,6 @@
 require "forwardable"
 require "sqoot/offer"
+require "sqoot/response/parse_gzip"
 
 module Sqoot
   class Client
@@ -27,8 +28,7 @@ module Sqoot
     def connection
       params = {}
       @connection ||= Faraday.new(:url => api_url, :params => params, :headers => default_headers) do |builder|
-        builder.use FaradayMiddleware::Mashify
-        builder.use FaradayMiddleware::ParseJson, :content_type => /\bjson$/
+        builder.use Faraday::Response::ParseGzip
         builder.adapter Faraday.default_adapter
       end
     end
