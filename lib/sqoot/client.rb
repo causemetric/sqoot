@@ -3,6 +3,7 @@ require "sqoot/offer"
 require "sqoot/category"
 require "sqoot/provider"
 require "sqoot/commission"
+require "sqoot/click"
 require "sqoot/response/parse_gzip"
 
 module Sqoot
@@ -13,6 +14,7 @@ module Sqoot
     include Category
     include Provider
     include Commission
+    include Click
 
     attr_reader :affiliate_token, :authentication_token
 
