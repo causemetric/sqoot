@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    Sqoot.configure do |config|
+      config.affiliate_token = "YOUR AFFILIATE TOKEN"
+      config.authentication_token = "YOUR AUTHENTICATION TOKEN"
+    end
+
+    sqoot = Sqoot::Client.new
+
+    sqoot.offers
+    #=> returns a list of offers
+
+    sqoot.offers(:location => '123456')
 
 ## Contributing
 
