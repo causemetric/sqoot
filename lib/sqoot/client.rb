@@ -1,5 +1,6 @@
 require "forwardable"
 require "sqoot/offer"
+require "sqoot/category"
 require "sqoot/response/parse_gzip"
 
 module Sqoot
@@ -7,6 +8,7 @@ module Sqoot
     extend Forwardable
 
     include Offer
+    include Category
 
     attr_reader :affiliate_token, :authentication_token
 

@@ -15,15 +15,18 @@ SimpleCov.start do
   add_filter '/vendor'
 end
 
-VCR.config do |c|
+VCR.configure do |c|
   c.allow_http_connections_when_no_cassette = true
   c.cassette_library_dir = 'spec/cassettes'
   c.stub_with :fakeweb
+  c.configure_rspec_metadata!
   c.default_cassette_options = { :record => :new_episodes }
 end
 
 RSpec.configure do |c|
   c.extend VCR::RSpec::Macros
+  c.treat_symbols_as_metadata_keys_with_true_values = true
+
   c.before(:each) do
     Sqoot.configure do |config|
       config.affiliate_token = "YOUR AFFILIATE TOKEN"

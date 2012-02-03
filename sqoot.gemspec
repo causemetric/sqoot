@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "json_pure", "~> 1.6.5"
   gem.add_development_dependency "rake", "~> 0.9.2.2"
   gem.add_development_dependency "shoulda", "~> 2.11.3"
-  gem.add_development_dependency "vcr", "~> 1.11.3"
+  gem.add_development_dependency "vcr", "~> 2.0.0.rc1"
   gem.add_development_dependency "simplecov", "~> 0.5.4"
   gem.add_development_dependency "simplecov-rcov", "~> 0.2.3"
 end
