@@ -1,6 +1,9 @@
 # Sqoot
 
-TODO: Write a gem description
+Wrapper for [Sqoot](http://www.sqoot.com) [API](http://www.sqoot.com/docs/api). Highly inspired by [Gowalla](https://github.com/pengwynn/gowalla) gem.
+Built using [Faraday](https://github.com/technoweenie/faraday) and [Faraday Middleware](https://github.com/pengwynn/faraday_middleware).
+
+To get the list of available parameters kindly check out [API](http://www.sqoot.com/docs/search)
 
 ## Installation
 
