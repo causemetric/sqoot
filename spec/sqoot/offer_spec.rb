@@ -15,7 +15,6 @@ describe Sqoot::Offer do
   it "should return a list of offers given a location parameter", :vcr do
     offers_on_location = client.offers(:location => '12345')
     offers_on_location.equal? Hashie::Mash
-    offers_on_location.total.should == 1
     offers_on_location.offers.equal? Array
   end
 
