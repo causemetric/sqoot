@@ -28,10 +28,39 @@ Or install it yourself as:
 
     sqoot = Sqoot::Client.new
 
+    # http://api.sqoot.com/v1/offers?affiliate_token=yadayada
     sqoot.offers
     #=> returns a list of offers
 
-    sqoot.offers(:location => '123456')
+    # http://api.sqoot.com/v1/offers?affiliate_token=yadayada&location=Chicago
+    sqoot.offers(:location => 'Chicago')
+
+    # http://api.sqoot.com/v1/offers?affiliate_token=yadayada&location=Chicago&per_page=10
+    sqoot.offers(:location => 'Chicago', :per_page => 10)
+
+    # http://api.sqoot.com/v1/offers?affiliate_token=yadayada&categories=health-beauty&location=&page=2
+    sqoot.offers(:location => 'Chicago', :per_page => 10, :categories => 'health-beauty', :page => 2)
+
+    # http://api.sqoot.com/v1/offers?affiliate_token=yadayada&order=commission&per_page=250&price_at_least=10
+    sqoot.offers(:price_at_least => 10, :order => commission)
+
+    # http://api.sqoot.com/v1/providers?affiliate_token=yadayada
+    sqoot.providers
+
+    # http://api.sqoot.com/v1/commissions?authentication_token=tokenawesome
+    sqoot.commissions
+    # => returns current month commissions
+
+    sqoot.commissions(:to => '2012-01-01', :from => '2012-01-20')
+    # => returns commissions using date_range :to & :from
+
+    # http://api.sqoot.com/v1/clicks?authentication_token=tokenawesome
+    sqoot.clicks
+    # => returns real-time clicks from the event request limit of 1000
+
+    sqoot.clicks(:to => '2012-01-01', :from => '2012-01-20')
+    # => returns clicks using date_range :to & :from
+
 
 ## Contributing
 
