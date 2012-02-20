@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "faraday", "~> 0.7.5"
   gem.add_runtime_dependency "faraday_middleware", "~> 0.8.4"
-  gem.add_runtime_dependency "hashie", "~> 1.1.0"
+  gem.add_runtime_dependency "hashie", "~> 1.2.0"
   gem.add_runtime_dependency "multi_json", "~> 1.0.4"
 
   gem.add_development_dependency "rspec", "~> 2.8.0"
