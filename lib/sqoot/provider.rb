@@ -5,13 +5,7 @@ module Sqoot
     #
     # @return [Hashie::Mash]
     def providers(options={})
-      options['affiliate_token'] = affiliate_token
-      query = options
-      response = connection.get do |req|
-        req.url "/v1/providers", query
-      end
-
-      response.body
+      get('/v1/providers', options)
     end
   end
 end

@@ -5,13 +5,14 @@ module Sqoot
     #
     # @return [Hashie::Mash] category list
     def categories(options={})
-      options['affiliate_token'] = affiliate_token
-      query = options
-      response = connection.get do |req|
-        req.url "/v1/categories", query
-      end
+      get('/v1/categories', options)
+      # options['affiliate_token'] = affiliate_token
+      # query = options
+      # response = connection.get do |req|
+      #   req.url "/v1/categories", query
+      # end
 
-      response.body
+      # response.body
     end
   end
 end

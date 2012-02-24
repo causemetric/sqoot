@@ -4,6 +4,7 @@ require "sqoot/category"
 require "sqoot/provider"
 require "sqoot/commission"
 require "sqoot/click"
+require "sqoot/request"
 require "sqoot/response/parse_gzip"
 
 module Sqoot
@@ -15,6 +16,7 @@ module Sqoot
     include Provider
     include Commission
     include Click
+    include Request
 
     attr_reader :affiliate_token, :authentication_token
 
@@ -35,7 +37,7 @@ module Sqoot
     # @return [Faraday::Connection]
     def connection
       params = {}
-      @connection ||= Faraday.new(:url => api_url, :params => params, :headers => default_headers) do |builder|
+      @connection = Faraday.new(:url => api_url, :params => params, :headers => default_headers) do |builder|
         builder.use Faraday::Response::ParseGzip
         builder.adapter Faraday.default_adapter
       end

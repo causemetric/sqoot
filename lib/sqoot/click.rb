@@ -8,13 +8,7 @@ module Sqoot
     #
     # @return [Hashie::Mash]
     def clicks(options={})
-      options['authentication_token'] = authentication_token
-      query = options
-      response = connection.get do |req|
-        req.url "/v1/clicks", query
-      end
-
-      response.body
+      get('/v1/clicks', options)
     end
   end
 end

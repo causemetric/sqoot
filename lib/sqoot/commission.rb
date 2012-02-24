@@ -8,13 +8,7 @@ module Sqoot
     #
     # @return [Hashie::Mash]
     def commissions(options={})
-      options['authentication_token'] = authentication_token
-      query = options
-      response = connection.get do |req|
-        req.url "/v1/commissions", query
-      end
-
-      response.body
+      get('/v1/commissions', options)
     end
 
   end

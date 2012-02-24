@@ -1,58 +1,51 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
-    uri: http://api.sqoot.com/v1/<target>?affiliate_token=AUTHENTICATION_TOKEN
-    body: ""
-    headers: 
+    uri: AFFILIATE_TOKEN
+    body: ''
+    headers:
       authorization: AUTHENTICATION_TOKEN
-      accept: 
-      - "*/*"
-      accept-encoding: 
+      accept:
+      - ! '*/*'
+      accept-encoding:
       - gzip
-      user-agent: 
+      user-agent:
       - Ruby gem
-      connection: 
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      server: 
+    headers:
+      server:
       - nginx
-      date: 
-      - Mon, 06 Feb 2012 15:14:29 GMT
-      content-type: 
+      date:
+      - Fri, 24 Feb 2012 15:06:01 GMT
+      content-type:
       - text/javascript; charset=utf-8
-      connection: 
+      connection:
       - close
-      etag: 
-      - "\"6a2c2510d7a5005d58aa54d7115b5c5d\""
-      cache-control: 
+      etag:
+      - ! '"40bffb368b562ed6bb78fd82c6682710"'
+      cache-control:
       - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      x-ua-compatible:
       - IE=Edge,chrome=1
-      x-runtime: 
-      - "0.037450"
-      content-length: 
-      - "151"
-      x-varnish: 
-      - "1787435338"
-      age: 
-      - "0"
-      via: 
+      x-runtime:
+      - '0.020111'
+      content-length:
+      - '151'
+      x-varnish:
+      - '839847143'
+      age:
+      - '0'
+      via:
       - 1.1 varnish
-    body: |-
-      {
-        "total": 0,
-        "from": "2012-02-01T00:00:00-08:00",
-        "to": "2012-02-06T07:14:29-08:00",
-        "total_commission_amount": 0.0,
-        "commissions": [
-      
-        ]
-      }
-    http_version: "1.1"
-  recorded_at: Mon, 06 Feb 2012 15:14:30 GMT
+    body: ! "{\n  \"total\": 0,\n  \"from\": \"2012-02-01T00:00:00-08:00\",\n  \"to\":
+      \"2012-02-24T07:06:01-08:00\",\n  \"total_commission_amount\": 0.0,\n  \"commissions\":
+      [\n\n  ]\n}"
+    http_version: '1.1'
+  recorded_at: Fri, 24 Feb 2012 15:06:01 GMT
 recorded_with: VCR 2.0.0.rc1

@@ -21,6 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency "multi_json", "~> 1.0.4"
 
   gem.add_development_dependency "rspec", "~> 2.8.0"
+  gem.add_development_dependency "guard-rspec", "~> 0.6.0"
   gem.add_development_dependency "fakeweb", "~> 1.3.0"
   gem.add_development_dependency "jnunemaker-matchy", "~> 0.4.0"
   gem.add_development_dependency "json_pure", "~> 1.6.5"
