@@ -2,8 +2,8 @@
 require File.expand_path('../lib/sqoot/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Julius F"]
-  gem.email         = ["baldrailers@gmail.com"]
+  gem.authors       = ["Julius F", "Wynn Netherland"]
+  gem.email         = ["baldrailers@gmail.com", "wynn.netherland@gmail.com"]
   gem.description   = %q{Wrapper for Sqoot API. Using FaradayMiddleware}
   gem.summary       = %q{Wrapper for Sqoot API}
   gem.homepage      = "https://github.com/causemetric/sqoot"
