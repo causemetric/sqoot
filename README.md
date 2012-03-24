@@ -1,4 +1,4 @@
-# Sqoot
+# Sqoot [![Build Status](https://secure.travis-ci.org/causemetric/sqoot.png)](http://travis-ci.org/causemetric/sqoot)
 
 Wrapper for [Sqoot](http://www.sqoot.com) [API](http://www.sqoot.com/docs/api). Highly inspired by [Gowalla](https://github.com/pengwynn/gowalla) gem.
 Built using [Faraday](https://github.com/technoweenie/faraday) and [Faraday Middleware](https://github.com/pengwynn/faraday_middleware).
