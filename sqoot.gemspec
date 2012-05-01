@@ -18,7 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency "faraday", "~> 0.7.5"
   gem.add_runtime_dependency "faraday_middleware", "~> 0.8.4"
   gem.add_runtime_dependency "hashie", "~> 1.2.0"
-  gem.add_runtime_dependency "multi_json", "~> 1.0.4"
 
   gem.add_development_dependency "rspec", "~> 2.8.0"
   gem.add_development_dependency "guard-rspec", "~> 0.6.0"
@@ -28,6 +27,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rake", "~> 0.9.2.2"
   gem.add_development_dependency "shoulda", "~> 2.11.3"
   gem.add_development_dependency "vcr", "~> 2.0.0.rc1"
-  gem.add_development_dependency "simplecov", "~> 0.5.4"
+  gem.add_development_dependency "simplecov", "~> 0.6.2"
   gem.add_development_dependency "simplecov-rcov", "~> 0.2.3"
 end
