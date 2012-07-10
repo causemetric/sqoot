@@ -33,6 +33,7 @@ module Sqoot
       params = {}
       @connection = Faraday.new(:url => api_url, :params => params, :headers => default_headers) do |builder|
         builder.use Faraday::Response::ParseGzip
+        builder.use FaradayMiddleware::FollowRedirects
         builder.adapter Faraday.default_adapter
       end
     end
