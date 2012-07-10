@@ -18,18 +18,12 @@ module Sqoot
     include Click
     include Request
 
-    attr_reader :affiliate_token, :authentication_token
+    attr_reader :affiliate_token, :authentication_token, :api_url
 
     def initialize(options={})
       @affiliate_token        = options[:affiliate_token] || Sqoot.affiliate_token
       @authentication_token   = options[:authentication_token] || Sqoot.authentication_token
-    end
-
-    # Provides the URL for accessing the API
-    #
-    # @return [String]
-    def api_url
-      "http://api.sqoot.com"
+      @api_url                = options[:api_url] || Sqoot.api_url
     end
 
     # Raw HTTP connection with Faraday::Connection
