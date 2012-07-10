@@ -2,15 +2,15 @@
 require File.expand_path('../lib/sqoot/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Julius F", "Wynn Netherland"]
-  gem.email         = ["baldrailers@gmail.com", "wynn.netherland@gmail.com"]
+  gem.authors       = ["Julius F", "Wynn Netherland", "Jesse Dearing"]
+  gem.email         = ["baldrailers@gmail.com", "wynn.netherland@gmail.com", "jesse.dearing@gmail.com"]
   gem.description   = %q{Wrapper for Sqoot API. Using FaradayMiddleware}
   gem.summary       = %q{Wrapper for Sqoot API}
   gem.homepage      = "https://github.com/causemetric/sqoot"
 
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "sqoot"
   gem.require_paths = ["lib"]
   gem.version       = Sqoot::VERSION
