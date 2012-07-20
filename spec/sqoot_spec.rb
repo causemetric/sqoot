@@ -14,7 +14,7 @@ describe Sqoot do
   end
 
   it "should use HTTP API endpoint" do
-    client.api_url.should == "http://api.sqoot.com"
+    client.api_url.should == "http://api.sqoot.com/v1"
   end
 
 end
