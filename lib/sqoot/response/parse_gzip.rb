@@ -18,10 +18,10 @@ module Faraday
         gz = Zlib::GzipReader.new(sio)
         self.class.mash_class.new(JSON.parse(gz.read()))
       rescue
-        if body.is_a? String
-          self.class.mash_class.new(:error => body)
-        else
+        begin
           self.class.mash_class.new JSON.parse body
+        rescue
+          self.class.mash_class.new(:error => body)
         end
       end
 
