@@ -20,7 +20,7 @@ module Sqoot
     end
 
     def load_defaults
-      self.api_url ||= "http://api.sqoot.com"
+      self.api_url ||= "https://api.sqoot.com"
       self.api_version ||= 2
     end
 
