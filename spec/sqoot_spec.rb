@@ -13,8 +13,12 @@ describe Sqoot do
     client.authentication_token == 'authentication_token'
   end
 
+  it "should configure with default v2 for api_version" do
+    client.api_version == 2
+  end
+
   it "should use HTTP API endpoint" do
-    client.api_url.should == "http://api.sqoot.com/v1"
+    client.api_url.should == "http://api.sqoot.com"
   end
 
 end

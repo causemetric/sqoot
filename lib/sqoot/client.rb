@@ -4,6 +4,7 @@ require "sqoot/category"
 require "sqoot/provider"
 require "sqoot/commission"
 require "sqoot/click"
+require "sqoot/deal"
 require "sqoot/request"
 require "sqoot/response/parse_gzip"
 
@@ -17,13 +18,15 @@ module Sqoot
     include Commission
     include Click
     include Request
+    include Deal
 
-    attr_reader :affiliate_token, :authentication_token, :api_url
+    attr_reader :affiliate_token, :authentication_token, :api_url, :api_version
 
     def initialize(options={})
       @affiliate_token        = options[:affiliate_token] || Sqoot.affiliate_token
       @authentication_token   = options[:authentication_token] || Sqoot.authentication_token
       @api_url                = options[:api_url] || Sqoot.api_url
+      @api_version            = options[:api_version] || Sqoot.api_version
     end
 
     # Raw HTTP connection with Faraday::Connection

@@ -8,7 +8,7 @@ directory = File.expand_path(File.dirname(__FILE__))
 module Sqoot
 
   class << self
-    attr_accessor :affiliate_token, :authentication_token, :api_url
+    attr_accessor :affiliate_token, :authentication_token, :api_url, :api_version
 
     # Configure default credentials easily
     #
@@ -20,7 +20,8 @@ module Sqoot
     end
 
     def load_defaults
-      self.api_url ||= "http://api.sqoot.com/v1"
+      self.api_url ||= "http://api.sqoot.com"
+      self.api_version ||= 2
     end
 
   end

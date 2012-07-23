@@ -7,11 +7,19 @@ module Sqoot
 
     def convert_params(path, data={})
       auth_endpoints = ['commissions', 'clicks']
+      private_beta_endpoints = ['deals', 'merchants']
 
       if auth_endpoints.include? path.split('/')[2]
         data['authentication_token'] = authentication_token
       else
-        data['affiliate_token'] = affiliate_token
+        # TODO:
+        # Temporary provisioned filter until
+        # v2 is publicly available
+        if private_beta_endpoints.include? path.split('/')[2]
+          data['api_key'] = affiliate_token
+        else
+          data['affiliate_token'] = affiliate_token
+        end
       end
 
       data

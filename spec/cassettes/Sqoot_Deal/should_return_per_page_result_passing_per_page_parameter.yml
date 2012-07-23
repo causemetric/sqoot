@@ -1,0 +1,191 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization: AUTHENTICATION_TOKEN
+      accept:
+      - ! '*/*'
+      accept-encoding:
+      - gzip
+      user-agent:
+      - Ruby gem
+      connection:
+      - close
+  response:
+    status:
+      code: 301
+      message: ! 'Moved Permanently '
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - text/html
+      date:
+      - Sun, 22 Jul 2012 11:36:16 GMT
+      location:
+      - https://api.sqoot.com/v2/deals?per_page=3&api_key=API_KEY
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2011-07-09)
+      strict-transport-security:
+      - max-age=31536000
+      x-rack-cache:
+      - miss
+      content-length:
+      - '0'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Sun, 22 Jul 2012 11:36:16 GMT
+- request:
+    method: get
+    uri: API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization: AUTHENTICATION_TOKEN
+      accept:
+      - ! '*/*'
+      accept-encoding:
+      - gzip
+      user-agent:
+      - Ruby gem
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      cache-control:
+      - must-revalidate, private, max-age=0
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 22 Jul 2012 11:36:20 GMT
+      etag:
+      - ! '"d7c9f80781af994a8f28302c26634049"'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2011-07-09)
+      strict-transport-security:
+      - max-age=31536000
+      x-rack-cache:
+      - miss
+      x-request-id:
+      - 450ca5631dd2e39e0352ea50d1172e59
+      x-runtime:
+      - '0.106570'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      content-length:
+      - '73'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"metadata":{"total":0,"page":1,"per_page":3,"location":null},"deals":[]}'
+    http_version: '1.1'
+  recorded_at: Sun, 22 Jul 2012 11:36:20 GMT
+- request:
+    method: get
+    uri: API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization: AUTHENTICATION_TOKEN
+      accept:
+      - ! '*/*'
+      accept-encoding:
+      - gzip
+      user-agent:
+      - Ruby gem
+      connection:
+      - close
+  response:
+    status:
+      code: 301
+      message: ! 'Moved Permanently '
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - text/html
+      date:
+      - Mon, 23 Jul 2012 06:38:30 GMT
+      location:
+      - https://api.sqoot.com/v2/deals?per_page=3&api_key=API_KEY
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2011-07-09)
+      strict-transport-security:
+      - max-age=31536000
+      x-rack-cache:
+      - miss
+      content-length:
+      - '0'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Mon, 23 Jul 2012 06:38:31 GMT
+- request:
+    method: get
+    uri: API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      authorization: AUTHENTICATION_TOKEN
+      accept:
+      - ! '*/*'
+      accept-encoding:
+      - gzip
+      user-agent:
+      - Ruby gem
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      cache-control:
+      - must-revalidate, private, max-age=0
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 23 Jul 2012 06:38:36 GMT
+      etag:
+      - ! '"d7c9f80781af994a8f28302c26634049"'
+      server:
+      - WEBrick/1.3.1 (Ruby/1.9.2/2011-07-09)
+      strict-transport-security:
+      - max-age=31536000
+      x-rack-cache:
+      - miss
+      x-request-id:
+      - ed6b649001a44b5c9308b347aeda8c82
+      x-runtime:
+      - '0.089983'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      content-length:
+      - '73'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"metadata":{"total":0,"page":1,"per_page":3,"location":null},"deals":[]}'
+    http_version: '1.1'
+  recorded_at: Mon, 23 Jul 2012 06:38:36 GMT
+recorded_with: VCR 2.0.1
