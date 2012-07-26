@@ -8,14 +8,9 @@ describe Sqoot::Offer do
     client.offers.equal? Hashie::Mash
   end
 
-  it "should return an array of offers", :vcr do
-    client.offers.offers.equal? Array
-  end
-
   it "should return a list of offers given a location parameter", :vcr do
     offers_on_location = client.offers(:location => '12345')
     offers_on_location.equal? Hashie::Mash
-    offers_on_location.offers.equal? Array
   end
 
 end

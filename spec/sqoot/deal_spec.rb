@@ -12,8 +12,4 @@ describe Sqoot::Deal do
     client.deals(:location => "444 Castro St. Mountain View").equal? Hashie::Mash
   end
 
-  it "should return per_page result passing per_page parameter", :vcr do
-    client.deals(:per_page => 3).per_page == 3
-  end
-
 end

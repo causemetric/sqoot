@@ -8,8 +8,4 @@ describe Sqoot::Click do
     client.clicks.equal? Hashie::Mash
   end
 
-  it "should return an array of clicks", :vcr do
-    client.clicks.categories.equal? Array
-  end
-
 end
