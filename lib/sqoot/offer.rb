@@ -9,7 +9,9 @@ module Sqoot
     #
     # @return [Hashie::Mash] offers list
     def offers(options={})
-      get('/v1/offers', options)
+      offers = get('/v1/offers', options)
+
+      offers.offers if offers.offers?
     end
 
   end

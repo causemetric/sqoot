@@ -9,7 +9,9 @@ module Sqoot
     # @param [Integer] page (Which page of result to return. Default to 1.)
     # @param [Integer] per_page (Number of results to return at once. Defaults to 10.)
     def deals(options={})
-      get('/v2/deals', options)
+      deals = get('/v2/deals', options)
+
+      deals.deals if deals.deals?
     end
 
   end
