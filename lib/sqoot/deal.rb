@@ -11,7 +11,14 @@ module Sqoot
     def deals(options={})
       deals = get('/v2/deals', options)
 
-      deals.deals if deals.deals?
+      deals.deals.map(&:deal) if deals.deals?
+    end
+
+
+    # Retrieve a deal by id
+    #
+    def deal(id, options={})
+      get("/v2/deals/#{id}", options)
     end
 
   end
