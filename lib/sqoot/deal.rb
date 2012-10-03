@@ -11,7 +11,8 @@ module Sqoot
     def deals(options={})
       deals = get('/v2/deals', options)
 
-      deals.deals.map(&:deal) if deals.deals?
+      deals = deals.deals.map(&:deal) if deals.deals?
+      deals
     end
 
 
