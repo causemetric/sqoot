@@ -1,6 +1,8 @@
 module Sqoot
   module Request
 
+    attr_reader :last_response
+
     def get(path, options)
       request(:get, path, convert_params(path, options))
     end
@@ -28,6 +30,7 @@ module Sqoot
 
     def request(method, path, options)
       response = connection.send(method) do |request|
+        request.options[:timeout] = 10
         case method
         when :delete, :get
           request.url(path, options)
@@ -37,6 +40,7 @@ module Sqoot
         end
       end
 
+      @last_response = response
       response.body
     end
 
