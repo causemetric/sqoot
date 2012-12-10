@@ -6,7 +6,7 @@ require "sqoot/commission"
 require "sqoot/click"
 require "sqoot/deal"
 require "sqoot/request"
-require "sqoot/response/parse_gzip"
+require "sqoot/faraday_middleware/parse_gzip"
 
 module Sqoot
   class Client
@@ -34,17 +34,18 @@ module Sqoot
     # @return [Faraday::Connection]
     def connection
       params = {}
-      @connection = Faraday.new(:url => api_url, :params => params, :headers => default_headers) do |builder|
-        builder.use Faraday::Response::ParseGzip
-        builder.use FaradayMiddleware::FollowRedirects
-        builder.adapter Faraday.default_adapter
+      @connection ||= Faraday.new(:url => api_url, :params => params, :headers => default_headers) do |conn|
+        conn.response :gzip
+        conn.response :follow_redirects
+
+        conn.adapter Faraday.default_adapter
       end
     end
 
     private
 
     def default_headers
-      headers = {
+      {
         :authorization => @authentication_token,
         :accept => '*/*',
         :accept_encoding => 'gzip',
