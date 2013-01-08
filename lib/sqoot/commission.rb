@@ -8,7 +8,7 @@ module Sqoot
     #
     # @return [Hashie::Mash]
     def commissions(options={})
-      get('/v1/commissions', options)
+      get('/v2/commissions', options)
     end
 
   end

@@ -1,5 +1,5 @@
 require "forwardable"
-require "sqoot/offer"
+require "sqoot/merchant"
 require "sqoot/category"
 require "sqoot/provider"
 require "sqoot/commission"

@@ -5,7 +5,7 @@ module Sqoot
     #
     # @return [Hashie::Mash]
     def providers(options={})
-      get('/v1/providers', options)
+      get('/v2/providers', options)
     end
   end
 end

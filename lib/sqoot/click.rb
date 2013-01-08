@@ -8,7 +8,7 @@ module Sqoot
     #
     # @return [Hashie::Mash]
     def clicks(options={})
-      clicks = get('/v1/clicks', options)
+      clicks = get('/v2/clicks', options)
 
       clicks.clicks if clicks.clicks?
     end
