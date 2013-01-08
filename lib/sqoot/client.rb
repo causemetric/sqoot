@@ -12,7 +12,7 @@ module Sqoot
   class Client
     extend Forwardable
 
-    include Offer
+    include Merchant
     include Category
     include Provider
     include Commission
