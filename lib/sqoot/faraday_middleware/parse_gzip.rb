@@ -1,7 +1,7 @@
-require "faraday"
+require 'faraday_middleware/response_middleware'
 
-module Faraday
-  class Response::ParseGzip < Response::Middleware
+module FaradayMiddleware
+  class ParseGzip < ResponseMiddleware
     class << self
       attr_accessor :mash_class
     end
@@ -29,3 +29,8 @@ module Faraday
 
   end
 end
+
+# deprecated alias
+Faraday::Response::ParseGzip = FaradayMiddleware::ParseGzip
+
+Faraday.register_middleware :response, :gzip => FaradayMiddleware::ParseGzip

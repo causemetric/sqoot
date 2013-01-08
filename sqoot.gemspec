@@ -2,8 +2,8 @@
 require File.expand_path('../lib/sqoot/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Julius F", "Wynn Netherland", "Jesse Dearing"]
-  gem.email         = ["baldrailers@gmail.com", "wynn.netherland@gmail.com", "jesse.dearing@gmail.com"]
+  gem.authors       = ['Pure Charity Dev Team']
+  gem.email         = ['dev@purecharity.com']
   gem.description   = %q{Wrapper for Sqoot API. Using FaradayMiddleware}
   gem.summary       = %q{Wrapper for Sqoot API}
   gem.homepage      = "https://github.com/causemetric/sqoot"
@@ -15,8 +15,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Sqoot::VERSION
 
-  gem.add_runtime_dependency "faraday", "~> 0.7.5"
-  gem.add_runtime_dependency "faraday_middleware", "~> 0.8.4"
+  gem.add_runtime_dependency "faraday", "~> 0.8"
+  gem.add_runtime_dependency "faraday_middleware", "~> 0.9"
   gem.add_runtime_dependency "hashie", "~> 1.2.0"
 
   gem.add_development_dependency "rspec", "~> 2.8.0"
